@@ -31,7 +31,6 @@ router.post('/add', async (req, res) => {
         user_id: req.user.id
     };
     await pool.query('INSERT INTO clients set ?', [newClient]);
-    req.flash('success', 'Client Saved Successfully');
     res.redirect('/clients');
 });
 
@@ -43,7 +42,6 @@ router.get('/', isLoggedIn, async (req, res) => {
 router.get('/delete/:id', async (req, res) => {
     const { id } = req.params;
     await pool.query('DELETE FROM clients WHERE ID = ?', [id]);
-    req.flash('success', 'Link Removed Successfully');
     res.redirect('/clients');
 });
 
@@ -76,7 +74,6 @@ router.post('/edit/:id', async (req, res) => {
         manga
     };
     await pool.query('UPDATE clients set ? WHERE id = ?', [newClient, id]);
-    req.flash('success', 'Client Updated Successfully');
     res.redirect('/clients');
 });
 
