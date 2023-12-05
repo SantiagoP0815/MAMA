@@ -25,6 +25,6 @@
     "timeago.js": "^4.0.0-beta.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.19.4"
   }
 }

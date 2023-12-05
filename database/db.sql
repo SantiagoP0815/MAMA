@@ -1,44 +1,47 @@
-CREATE DATABASE db_links;
-
-USE db_links;
-
 -- TABLE USER
--- all pasword wil be encrypted using SHA1
+-- Todas las contraseñas se cifrarán utilizando SHA1
 CREATE TABLE users (
-  id INT(11) NOT NULL,
+  id INT(11) NOT NULL AUTO_INCREMENT,
   username VARCHAR(16) NOT NULL,
   password VARCHAR(60) NOT NULL,
-  fullname VARCHAR(100) NOT NULL
+  fullname VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
 );
 
-ALTER TABLE users
-  ADD PRIMARY KEY (id);
-
-ALTER TABLE users
-  MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
-
-DESCRIBE users;
-
-INSERT INTO users (id, username, password, fullname) 
-  VALUES (1, 'john', 'password1', 'John Carter');
-
-SELECT * FROM users;
-
--- LINKS TABLE
-CREATE TABLE links (
-  id INT(11) NOT NULL,
-  title VARCHAR(150) NOT NULL,
-  url VARCHAR(255) NOT NULL,
-  description TEXT,
+-- CLIENTS TABLE
+CREATE TABLE clients (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(150) NOT NULL,
+  telefono VARCHAR(255),
+  busto VARCHAR(255),
+  talle VARCHAR(255),
+  espalda VARCHAR(255),
+  cintura VARCHAR(255),
+  base VARCHAR(255),
+  largoblusa VARCHAR(255),
+  largopantalon VARCHAR(255),
+  falda VARCHAR(255),
+  largototal VARCHAR(255),
+  cinturafalda VARCHAR(255),
+  cinturapantalon VARCHAR(255),
+  alturabusto VARCHAR(255),
+  separacionbusto VARCHAR(255),
+  escote VARCHAR(255),
+  manga VARCHAR(255),
   user_id INT(11),
-  created_at timestamp NOT NULL DEFAULT current_timestamp,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
   CONSTRAINT fk_user FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
-ALTER TABLE links
-  ADD PRIMARY KEY (id);
 
-ALTER TABLE links
-  MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
-
-DESCRIBE links;
+-- TABLE PEDIDOS
+CREATE TABLE pedidos (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  name VARCHAR(150) NOT NULL,
+  fechaentrega VARCHAR(255) ,
+  descripcion VARCHAR(255) NOT NULL,
+  client_id INT(11),
+  PRIMARY KEY (id),
+  CONSTRAINT fk_client FOREIGN KEY(client_id) REFERENCES clients(id)
+);

@@ -1,0 +1,107 @@
+<div class="col-md-8 mx-auto m-4">
+    <div class="card">
+        <div class="card-body">
+            <form action="/clients/">
+                <div class="d-flex">
+                <h1 class="mb-4 mx-auto my-auto">{{client.name}}</h1>
+                <div class="d-flex mx-auto my-auto">
+                    <div class="d-flex mx-auto">
+                        <h4 class="mr-1">Teléfono</h4>
+                        <input type="text" class="form-control" placeholder="Teléfono" value="{{client.telefono}}"
+                            readonly>
+                    </div>
+                </div>                    
+                </div>
+
+                <div class="dropdown-divider"></div>
+                <H1 class="mb-4">MEDIDAS</H1>
+                <div class="d-flex">
+                    <div class="mr-3">
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Busto: </h4>
+                            <input type="text" class="form-control" placeholder="Busto" value="{{client.busto}}"
+                                readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Talle:</h4>
+                            <input type="text" class="form-control" placeholder="Talle" value="{{client.talle}}"
+                                readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Espalda:</h4>
+                            <input type="text" class="form-control" placeholder="Espalda" value="{{client.espalda}}"
+                                readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Cintura:</h4>
+                            <input type="text" class="form-control" placeholder="Cintura" value="{{client.cintura}}"
+                                readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Base:</h4>
+                            <input type="text" class="form-control" placeholder="Base" value="{{client.base}}" readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Largo de la blusa:</h4>
+                            <input type="text" class="form-control" placeholder="Largo de la blusa"
+                                value="{{client.largoblusa}}" readonly>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Largo del pantalón:</h4>
+                            <input type="text" class="form-control" placeholder="Largo del pantalón"
+                                value="{{client.largopantalon}}" readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Falda:</h4>
+                            <input type="text" class="form-control" placeholder="Falda" value="{{client.falda}}"
+                                readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Largo total:</h4>
+                            <input type="text" class="form-control" placeholder="Largo total"
+                                value="{{client.largototal}}" readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Cintura de la falda:</h4>
+                            <input type="text" class="form-control" placeholder="Cintura de la falda"
+                                value="{{client.cinturafalda}}" readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Cintura del pantalón:</h4>
+                            <input type="text" class="form-control" placeholder="Cintura del pantalón"
+                                value="{{client.cinturapantalon}}" readonly>
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Altura del busto:</h4>
+                            <input type="text" class="form-control" placeholder="Altura del busto"
+                                value="{{client.alturabusto}}" readonly>
+                        </div>
+                        
+                    </div>
+                    <div class="ml-3">
+                                            <div class="form-group d-flex mx-auto">
+                        <h4 class="mr-1" style="white-space: nowrap;">Separación del busto:</h4>
+                        <input type="text" class="form-control" placeholder="Separación del busto"
+                            value="{{client.separacionbusto}}" readonly>
+                    </div>
+                    <div class="form-group d-flex mx-auto">
+                        <h4 class="mr-1" style="white-space: nowrap;">Escote:</h4>
+                        <input type="text" class="form-control" placeholder="Escote" value="{{client.escote}}" readonly>
+                    </div>
+                    <div class="form-group d-flex mx-auto">
+                        <h4 class="mr-1" style="white-space: nowrap;">Manga:</h4>
+                        <input type="text" class="form-control" placeholder="Manga" value="{{client.manga}}" readonly>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Clientas
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container p-4">
+    <div class="col-md-4 mx-auto mb-4">
+        <div class="card card-body text-center">
+            <a href="/clients/add">Agregar clienta</a>
+        </div>
+    </div>
+    <div class="row">
+        {{#each clients}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a href="/clients/info/{{id}}">{{name}}</a>
+                    <p class="text-muted">
+                        {{timeago created_at}}
+                    </p>
+                    <a class="btn btn-danger" href="/clients/delete/{{id}}">
+                        Eliminar clienta
+                    </a>
+                    <a class="btn btn-secondary" href="/clients/edit/{{id}}">
+                        Editar
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

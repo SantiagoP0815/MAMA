@@ -1,0 +1,101 @@
+<div class="col-md-8 mx-auto m-4">
+    <div class="card">
+        <div class="card-body">
+            <form action="/clients/edit/{{client.id}}" method="POST">
+                <h1 class="mb-4">CLIENTA</h1>
+                <div class="d-flex">
+                    <div class="d-flex mx-auto" style="width: 100%;">
+                        <h4 class="mr-1">Nombre</h4>
+                        <input type="text" name="name" class="form-control mr-4" placeholder="Nombre" value="{{client.name}}">
+                    </div>
+                    <div class="d-flex mx-auto" style="width: 100%;">
+                        <h4 class="mr-1">Teléfono</h4>
+                        <input type="text" name="telefono" class="form-control" placeholder="Teléfono" value="{{client.telefono}}">
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <H1 class="mb-4">MEDIDAS</H1>
+                <div class="d-flex">
+                    <div class="mr-3">
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Busto: </h4>
+                            <input type="text" name="busto" class="form-control" placeholder="Busto" value="{{client.busto}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Talle:</h4>
+                            <input type="text" name="talle" class="form-control" placeholder="Talle" value="{{client.talle}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Espalda:</h4>
+                            <input type="text" name="espalda" class="form-control" placeholder="Espalda" value="{{client.espalda}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Cintura:</h4>
+                            <input type="text" name="cintura" class="form-control" placeholder="Cintura" value="{{client.cintura}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Base:</h4>
+                            <input type="text" name="base" class="form-control" placeholder="Base" value="{{client.base}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Largo de la blusa:</h4>
+                            <input type="text" name="largoblusa" class="form-control" placeholder="Largo de la blusa"
+                                value="{{client.largoblusa}}">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Largo del pantalón:</h4>
+                            <input type="text" name="largopantalon" class="form-control" placeholder="Largo del pantalón"
+                                value="{{client.largopantalon}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1">Falda:</h4>
+                            <input type="text" name="falda" class="form-control" placeholder="Falda" value="{{client.falda}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Largo total:</h4>
+                            <input type="text" name="largototal" class="form-control" placeholder="Largo total"
+                                value="{{client.largototal}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Cintura de la falda:</h4>
+                            <input type="text" name="cinturafalda" class="form-control" placeholder="Cintura de la falda"
+                                value="{{client.cinturafalda}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Cintura del pantalón:</h4>
+                            <input type="text" name="cinturapantalon" class="form-control" placeholder="Cintura del pantalón"
+                                value="{{client.cinturapantalon}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Altura del busto:</h4>
+                            <input type="text" name="alturabusto" class="form-control" placeholder="Altura del busto"
+                                value="{{client.alturabusto}}">
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Separación del busto:</h4>
+                            <input type="text" name="separacionbusto" class="form-control" placeholder="Separación del busto"
+                                value="{{client.separacionbusto}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Escote:</h4>
+                            <input type="text" name="escote" class="form-control" placeholder="Escote" value="{{client.escote}}">
+                        </div>
+                        <div class="form-group d-flex mx-auto">
+                            <h4 class="mr-1" style="white-space: nowrap;">Manga:</h4>
+                            <input type="text" name="manga" class="form-control" placeholder="Manga" value="{{client.manga}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
